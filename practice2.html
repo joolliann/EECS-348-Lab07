@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Color Changer</title>
+    <style>
+        #myTextBox {
+            padding: 10px;
+            border: solid 4px black; 
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change that color silly (youtube helped on this one)!</h1>
+    <p id="myTextBox">I wake to sleep, and take my waking slow.   
+        I feel my fate in what I cannot fear.   
+        I learn by going where I have to go.
+        
+        We think by feeling. What is there to know?   
+        I hear my being dance from ear to ear.   
+        I wake to sleep, and take my waking slow.
+        
+        Of those so close beside me, which are you?   
+        God bless the Ground!   I shall walk softly there,   
+        And learn by going where I have to go.
+        
+        Light takes the Tree; but who can tell us how?   
+        The lowly worm climbs up a winding stair;   
+        I wake to sleep, and take my waking slow.
+        
+        Great Nature has another thing to do   
+        To you and me; so take the lively air,   
+        And, lovely, learn by going where to go.
+        
+        This shaking keeps me steady. I should know.   
+        What falls away is always. And is near.   
+        I wake to sleep, and take my waking slow.   
+        I learn by going where I have to go.</p>
+    <div>
+        <h3>Border Color</h3>
+        <label for="borderRed">Red for Border:</label>
+        <input type="number" id="borderRed" min="0" max="255" value="0"><br>
+        <label for="borderGreen">Green for Border:</label>
+        <input type="number" id="borderGreen" min="0" max="255" value="0"><br>
+        <label for="borderBlue">Blue for Border:</label>
+        <input type="number" id="borderBlue" min="0" max="255" value="0"><br>
+        <label for="borderThickness">Thickness of Border:</label>
+        <input type="number" id="borderThickness" value="2"><br>
+        <h3>Background Color</h3>
+        <label for="bgRed">Red for Background:</label>
+        <input type="number" id="bgRed" min="0" max="255" value="255"><br>
+        <label for="bgGreen">Green for Background:</label>
+        <input type="number" id="bgGreen" min="0" max="255" value="255"><br>
+        <label for="bgBlue">Blue for Background:</label>
+        <input type="number" id="bgBlue" min="0" max="255" value="255"><br>
+        <button onclick="changeIt()">Change My Colors!</button>
+    </div>
+    <script>
+        function changeIt() {
+            const borderRed = document.getElementById('borderRed').value;
+            const borderGreen = document.getElementById('borderGreen').value;
+            const borderBlue = document.getElementById('borderBlue').value;
+            const borderThickness = document.getElementById('borderThickness').value;
+            const bgRed = document.getElementById('bgRed').value;
+            const bgGreen = document.getElementById('bgGreen').value;
+            const bgBlue = document.getElementById('bgBlue').value;
+            const textBox = document.getElementById('myTextBox');
+            textBox.style.borderColor = `rgb(${borderRed}, ${borderGreen}, ${borderBlue})`;
+            textBox.style.borderWidth = `${borderThickness}px`;
+            textBox.style.backgroundColor = `rgb(${bgRed}, ${bgGreen}, ${bgBlue})`;
+        }
+    </script>
+</body>
+</html>

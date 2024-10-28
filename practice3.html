@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECK THAT PASSWORD YOOOOOOOO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            margin: 30px;
+        }
+        #passwordForm {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Verification</h1>
+    <p>Type password to verify</p>
+    <div id="passwordForm">
+        <label for="password1">Enter Password: </label>
+        <input type="password" id="password1" placeholder="Type password here"><br>
+        <label for="password2">Confirm Password: </label>
+        <input type="password" id="password2" placeholder="Type password again"><br>
+        <button onclick="checkPassword()">Verify</button>
+    </div>
+    <script>
+        function checkPassword() {
+            const pass1 = document.getElementById('password1').value;
+            const pass2 = document.getElementById('password2').value;
+            if (pass1 !== pass2) {
+                alert("Oops! The passwords don't match.");
+            } else if (pass1.length < 8) {
+                alert("Password must be at least 8 characters!");
+            } else {
+                alert("Success! Your passwords match!"); 
+            }
+        }
+    </script>
+</body>
+</html>
